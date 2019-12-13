@@ -11,7 +11,7 @@ services:
     deploy:
       placement:
         constraints:
-          - node.labels.tipo == !prod
+          - node.labels.tipo == teste
       resources:
         limits:
           cpus: '0.50'
