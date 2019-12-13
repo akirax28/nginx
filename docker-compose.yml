@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  nginx:
+    image: nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - nginx:/etc/nginx/nginx.conf
+    deploy:
+      placement:
+        constraints:
+          - node.labels.tipo == !prod
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 128M 
+
+volumes:
+  nginx:
+    driver_opts:
+      o: bind
+      type: none
+      device: /data/nginx
