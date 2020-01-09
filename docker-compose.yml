@@ -14,7 +14,7 @@ services:
         limits:
           cpus: '0.50'
           memory: 128M
-     configs:
+    configs:
       - source: nginx_config
         target: /etc/nginx/nginx.conf
 configs:
