@@ -19,4 +19,4 @@ services:
         target: /etc/nginx/nginx.conf
 configs:
   nginx_config:
-    file: .config/nginx.conf
+    file: config/nginx.conf
